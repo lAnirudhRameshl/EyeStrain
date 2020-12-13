@@ -47,7 +47,7 @@ while True:
         rightEyeHull = cv2.convexHull(rightEye)
         cv2.drawContours(frame, [leftEyeHull], -1, (0, 0, 255), 1)
         cv2.drawContours(frame, [rightEyeHull], -1, (0, 0, 255), 1)
-        if ear <= THRESH and prev == False:
+        if ear <= THRESH:
             flag += 1
             print(flag)
             if flag >= 3:
