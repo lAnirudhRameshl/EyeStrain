@@ -13,7 +13,8 @@ def eye_aspect_ratio(eye):
     return ear
 
 THRESH = 0.20
-CONTINUOUS_FRAME_CHECK = 10
+DROWSY_FRAME_CHECK = 10
+SLEEP_FRAME_CHECK = 20
 
 detect = dlib.get_frontal_face_detector()
 predict = dlib.shape_predictor('./shape_predictor_68_face_landmarks.dat')
@@ -51,9 +52,11 @@ while True:
             print(flag)
             if flag >= 3:
                 prev = True
-            if flag >= CONTINUOUS_FRAME_CHECK:
+            if flag >= DROWSY_FRAME_CHECK:
                 # prev = True
                 print('\n\n\nDROWSYYYY\n\n\n')
+            if flag >= SLEEP_FRAME_CHECK:
+                print('\n\n\nPLEASE GO SLEEP\n\n\n')
         else:
             if prev:
                 blinked += 1
