@@ -4,7 +4,7 @@
 Detects the amount of Digital Eye Strain for a person by checking the blink rate and the amount of time the person closes the eye
 
 ## Points to remember while executing
-1. First, remember to download these libraries (the pip install command is given with the library name
+1. Remember to download these libraries (the pip install command is given with the library name
    - **imutils** - pip install imutils
    - **scipy** = pip install scipy
    - **cv2** = pip install opencv-python
@@ -15,4 +15,7 @@ Detects the amount of Digital Eye Strain for a person by checking the blink rate
      - Next, we can install cmake with "pip install cmake" and then finally install dlib with "pip install dlib"
      ### For MacOS and Ubuntu installation
      - Refer the following link for installing dlib in MacOS or Ubuntu https://www.pyimagesearch.com/2018/01/22/install-dlib-easy-complete-guide/
+2. Remember to have the 'shape_predictor_68_face_landmarks.dat' file in the same directory as the python file
 
+## Execution of code
+The code can be executed by typing 'python eye_strain_detection.py' in command line while being in the same directory as the code. An alternative would be to execute it through any other IDE
